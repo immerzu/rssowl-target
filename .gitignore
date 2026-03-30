@@ -1,3 +1,5 @@
 target_nix/
 target_win/
 target_win_x64/
+target.zip
+*.zip
