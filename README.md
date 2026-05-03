@@ -4,6 +4,22 @@ RSS Owl is a powerful application to organize, search and read your RSS, RDF & A
 Highlights are saved searches, google reader sync, notifications, filters, fast fulltext search and a flexible, clean user interface.
 http://rssowl.org/
 
+Note
+====
+This repository is the target-platform fork paired with
+`https://github.com/immerzu/rssowl`.
+
+It is used for the conservative **Windows x64** port of RSSOwl. The associated
+Windows packages are built to run with **64-bit Java** and currently bundle a
+**64-bit Java 8 runtime**.
+
+The setup notes below are largely inherited from the legacy upstream project and
+are kept as background material. For the active fork workflow, prefer the local
+build documentation in the surrounding x64 Codex kit.
+If legacy upstream notes below mention old release numbers or Java 1.5/1.6,
+read them as historical context only. For the active Windows x64 fork, use the
+current `main` branch and Java 8 for the packaged x64 build path.
+
 Build RSSOwl 2.x using Eclipse
 ==============================
 
@@ -19,10 +35,10 @@ As such, your package explorer should be empty and not have any other projects i
 
 ## Setup Target Platform
 
-RSSOwl requires a specific version of Eclipse RCP to run. You can not build RSSOwl with any newer RCP version than 3.4.2. For your convinience,
-the target platform in this repository will just work and matches with the target platform that is used to build RSSOwl for official releases.
+RSSOwl requires a specific version of Eclipse RCP to run. You can not build RSSOwl with any newer RCP version than 3.4.2. For your convenience,
+the target platform in this repository is intended to match the target platform used by this fork's maintained build path.
 
-* download rssowl-target (https://github.com/bpasero/rssowl-target/archive/master.zip)
+* download rssowl-target (https://github.com/immerzu/rssowl-target/archive/refs/heads/main.zip)
 * unzip rssowl-target and the included target.zip
 * in Eclipse open Window > Preferences > Plug-in Development > Target Platform
 * Click "Add..."
@@ -42,9 +58,11 @@ Remember to change the target platform between Windows and Mac/Linux if you plan
 RSSOwl is a set of Eclipse Java plug-ins. Use your favorite source control provider in Eclipse to either get the sources through
 SVN or GIT:
 * SVN: https://sourceforge.net/p/rssowl/code/8614/tree/
-* GIT: https://github.com/rssowl/RSSOwl/
+* GIT: https://github.com/immerzu/rssowl/
 
-Make sure to check out the specific RSSOwl version you want to build. The current stable version is RSSOwl 2.1.6. 
+Make sure to check out the specific RSSOwl version you want to build. For the
+active x64 fork, use the current `main` branch unless you intentionally need a
+historical revision.
 
 You should see the following list of plugins and features in your package explorer after import
 * org.rssowl.core
@@ -63,7 +81,8 @@ If you are not seeing these number of projects in the package explorer or you se
 
 You should not see any compile errors when you do a full build (Project > Clean).
 
-RSSOwl works best with Java 1.5 or 1.6.
+Legacy upstream guidance referenced Java 1.5 or 1.6. The active Windows x64
+fork uses Java 8 for the maintained build and packaging path.
 
 ## Run from Eclipse
 
