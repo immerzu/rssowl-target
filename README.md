@@ -47,6 +47,7 @@ the target platform in this repository is intended to match the target platform 
 * Choose "Directory" and "Next"
 * Click "Browse"
 * Choose "target_win" if you plan to run/export for Windows and "target_nix" for Mac/Linux
+  (for the active Windows x64 fork, use "target_win_x64")
 * Click "Ok" and "Finish" and "Finish" again
 * The target platform should show up in the list named "New Target"
 * Check the "New Target" so that it becomes active and close the preferences dialog with "Ok"
